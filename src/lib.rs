@@ -11,6 +11,11 @@ use std::{
     process,
 };
 
+use text_diff::{
+    diff,
+    Difference,
+};
+
 use walkdir::WalkDir;
 
 pub use error::Error;
@@ -68,15 +73,37 @@ pub fn compile(metadata: &Metadata) {
     let output_filename = &filename.with_extension("html");
 
     // Are we updating the output file?
-    let mut updated = true;
+    // 
+    // Read output file.. if the output file has updated,
+    // overwrite it with the new date
+    let updated = match fs::read(&output_filename) {
+        Ok (f) => {
+            let (_dist, changelist) = diff(
+                &String::from_utf8(f).unwrap(),
+                &String::from_utf8(emitted.clone()).unwrap(),
+                "\n"
+            );
 
-    // Read output file
-    // If the output file has updated, 
-    match fs::read(&output_filename) {
-        Ok (f) => if f == emitted {
-            updated = false;
+            // Changes that *do not apply* to updated date
+            let mut changes = 0;
+
+            for change in changelist {
+                if let Difference::Same (_) = change {
+                    // do nothing
+                } else if let Difference::Add (a) = change {
+                    if !a.contains("last-updated-date") {
+                        changes += 1;
+                    }
+                } else if let Difference::Rem (r) = change {
+                    if !r.contains("last-updated-date") {
+                        changes += 1;
+                    }
+                }
+            }
+
+            changes != 0
         },
-        Err (_) => updated = false,
+        Err (_) => false,
     };
 
     if updated {
