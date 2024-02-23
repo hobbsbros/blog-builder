@@ -1,0 +1,408 @@
+@media screen and (min-device-width: 480px) {
+    body {
+        font-family: 'Bitter', serif;
+        background-color: #f5eeda;
+    }
+    
+    h1 {
+        color: black;
+        font-size: 60px;
+        display: block;
+        text-align: center;
+        margin: 20px 0px 20px 0px;
+    }
+    
+    h2 {
+        color: #0b5394;
+        font-size: 48px;
+        font-family: 'Lexend', sans-serif;
+        margin: 10px 20% 10px 20%;
+    }
+    
+    h3 {
+        color: black;
+        font-size: 28px;
+        font-family: 'Lexend', sans-serif;
+        margin: 25px 20% 10px 20%;
+    }
+    
+    h4 {
+        font-family: 'Lexend', sans-serif;
+        font-size: 16px;
+        color: #404040;
+        margin: 4px 20% 4px 20%;
+    }
+    
+    h5 {
+        color: black;
+        font-size: 36px;
+        font-style: italic;
+        font-weight: light;
+        font-family: 'Lexend', sans-serif;
+        margin: 4px 20% 4px 20%;
+    }
+    
+    h6 {
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        letter-spacing: 6px;
+        font-weight: bold;
+        margin: 20px 0px 20px 0px;
+    }
+    
+    p {
+        margin: 10px 20% 10px 20%;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 28px;
+    }
+
+    p.block {
+        margin: 10px 20% 10px 25%;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 28px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    p.citation {
+        margin: 10px 20% 10px 25%;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 28px;
+        padding: 10px;
+        font-style: italic;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #c45050;
+    }
+    
+    div.tiles {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        margin: auto;
+    }
+    
+    div.menu {
+        top: 0px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        margin: 6px 20% 6px 20%;
+        height: auto;
+        text-transform: uppercase;
+        position: sticky;
+        background-color: #f5eeda;
+    }
+
+    div.menu a {
+        color: black;
+        font-family: 'Lexend', sans-serif;
+        font-size: 22px;
+        transition: 0.4s;
+    }
+
+    div.menu a:hover {
+        color: #c45050;
+        transition: 0.4s;
+    }
+    
+    a.tile {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 240px;
+        width: 45%;
+        background-color: #e0e0e0;
+        color: #c45050;
+        text-shadow: 0px 0px 10px white, 0px 0px 10px white;
+        transition: 0.4s;
+        border: none;
+        border-radius: 25px;
+        font-size: 48px;
+        margin: 10px;
+    }
+    
+    a.tile:hover {
+        min-height: 240px;
+        width: 45%;
+        background-color: #404040;
+        text-shadow: 0px 0px 10px black;
+        color: white;
+        transition: 0.4s;
+    }
+    
+    h6.footer {
+        color: #0b5394;
+    }   
+}
+
+@media print {
+    body {
+        font-family: 'Bitter', serif;
+        background-color: white;
+    }
+    
+    h1 {
+        color: black;
+        font-size: 60px;
+        display: block;
+        text-align: center;
+        margin: 20px 0px 20px 0px;
+    }
+    
+    h2 {
+        color: #0b5394;
+        font-size: 48px;
+        font-family: 'Lexend', sans-serif;
+        margin: 10px 0 10px 0;
+    }
+    
+    h3 {
+        color: black;
+        font-size: 28px;
+        font-family: 'Lexend', sans-serif;
+        margin: 25px 0 10px 0;
+    }
+    
+    h4 {
+        font-family: 'Lexend', sans-serif;
+        font-size: 16px;
+        color: #404040;
+        margin: 4px 0 4px 0;
+    }
+    
+    h5 {
+        color: black;
+        font-size: 36px;
+        font-style: italic;
+        font-weight: light;
+        font-family: 'Lexend', sans-serif;
+        margin: 4px 0 4px 0;
+    }
+    
+    h6 {
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        letter-spacing: 6px;
+        font-weight: bold;
+        margin: 20px 0px 20px 0px;
+    }
+    
+    p {
+        margin: 10px 0 10px 0;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 28px;
+    }
+
+    p.block {
+        margin: 10px 0 10px 5%;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 28px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+
+    p.citation {
+        margin: 10px 0 10px 5%;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 28px;
+        padding: 10px;
+        font-style: italic;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #c45050;
+    }
+    
+    div.tiles {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+    }
+    
+    div.menu {
+        display: none;
+    }
+    
+    a.tile {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 240px;
+        width: 45%;
+        background-color: #c0c0c0;
+        color: #c45050;
+        transition: 0.8s;
+        border-radius: 25px;
+        border: 1px solid black;
+        font-size: 48px;
+        margin: 10px;
+    }
+    
+    a.tile:hover {
+        min-height: 240px;
+        width: 45%;
+        background-color: #404040;
+        color: white;
+        transition: 0.8s;
+    }
+    
+    h6.footer {
+        color: #0b5394;
+    }   
+}
+
+@media screen and (max-device-width: 480px) {
+    body {
+        font-family: 'Bitter', serif;
+        background-color: #f5eeda;
+    }
+    
+    h1 {
+        color: black;
+        font-size: 108px;
+        display: block;
+        text-align: center;
+        margin: 20px 0px 20px 0px;
+    }
+    
+    h2 {
+        color: #0b5394;
+        font-size: 84px;
+        font-family: 'Lexend', sans-serif;
+        margin: 10px 0 10px 0;
+    }
+    
+    h3 {
+        color: black;
+        font-size: 60px;
+        font-family: 'Lexend', sans-serif;
+        margin: 25px 0 10px 0;
+    }
+    
+    h4 {
+        font-family: 'Lexend', sans-serif;
+        font-size: 48px;
+        color: #404040;
+        margin: 4px 0 4px 0;
+    }
+    
+    h5 {
+        color: black;
+        font-size: 48px;
+        font-style: italic;
+        font-weight: light;
+        font-family: 'Lexend', sans-serif;
+        margin: 4px 0 4px 0;
+    }
+    
+    h6 {
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        font-size: 36px;
+        letter-spacing: 6px;
+        font-weight: bold;
+        margin: 20px 0px 20px 0px;
+    }
+    
+    p {
+        margin: 10px 0 10px 0;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 60px;
+    }
+
+    p.block {
+        margin: 10px 5% 10px 5%;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 60px;
+        background-color: white;
+        padding: 40px;
+        border-radius: 40px;
+    }
+
+    p.citation {
+        margin: 10px 5% 10px 5%;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 60px;
+        padding: 10px;
+        border-radius: 10px;
+        font-style: italic;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #c45050;
+    }
+    
+    div.tiles {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+    }
+    
+    div.menu {
+        top: 0px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin: 6px 0 6px 0;
+        height: auto;
+        position: sticky;
+        background-color: #f5eeda;
+    }
+
+    div.menu a {
+        color: black;
+        font-family: 'Lexend', sans-serif;
+        font-size: 48px;
+    }
+    
+    a.tile {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 360px;
+        width: 100%;
+        background-color: #e0e0e0;
+        color: #c45050;
+        font-weight: bold;
+        transition: 0.8s;
+        border-radius: 25px;
+        font-size: 72px;
+        margin: 10px;
+    }
+    
+    a.tile:hover {
+        min-height: 240px;
+        width: 45%;
+        background-color: #404040;
+        color: white;
+        transition: 0.8s;
+    }
+    
+    h6.footer {
+        color: #0b5394;
+    }   
+}

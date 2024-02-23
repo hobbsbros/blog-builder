@@ -1,0 +1,114 @@
+body {
+    background-color: #e0e0e0;
+    font-family: 'Staatliches', cursive;
+}
+
+h1 {
+    color: navy;
+    display: block;
+    text-align: center;
+    font-size: 60px;
+    margin: 10px 5% 10px 5%;
+}
+
+h2 {
+    color: #404040;
+    display: block;
+    text-align: center;
+    font-size: 42px;
+}
+
+h3 {
+    color: black;
+    margin: 10px 20% 10px 20%;
+    font-size: 28px;
+}
+
+h4 {
+    color: #2e4b8b;
+    margin: 10px 20% 10px 20%;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+h5 {
+    color: black;
+    margin: 10px 20% 10px 20%;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h6 {
+    color: black;
+    margin: 10px 20% 10px 20%;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 20% 10px 20%;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: #c04444;
+}
+
+div.tiles {
+    width: 60%;
+    display: flex;
+    margin: auto;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+div.menu {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0px;
+    background-color: #e0e0e0;
+}
+
+div.menu a {
+    padding: 0px 40px 0px 40px;
+}
+
+a.tile {
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    min-height: 100px;
+    transition: 0.4s;
+}
+
+a.tile:hover {
+    transition: 0.4s;
+    text-shadow: 0px 0px 10px #893838;
+}
+
+h6.footer {
+    color: #34445c;
+    margin: 10px 20% 10px 20%;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-top: 40px;
+}

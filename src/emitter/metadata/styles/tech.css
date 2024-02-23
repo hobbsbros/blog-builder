@@ -1,0 +1,158 @@
+:root {
+    --spaceblue: #212999;
+    --flamered: #ad2626;
+    --babyblue: #477cb8;
+}
+
+body {
+    background-color: white;
+    margin: 0% 20%;
+    font-size: 24px;
+    font-family: "EB Garamond", serif;
+    padding-bottom: 80px;
+}
+
+h1 {
+    color: var(--spaceblue);
+    font-size: 96px;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    font-family: "Outfit", sans-serif;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+h2 {
+    color: darkblue;
+    font-style: italic;
+    font-size: 48px;
+    font-family: "Outfit", sans-serif;
+    transition: 0.4s;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h2::before {
+    content: "\2794";
+    font-size: 36px;
+    font-family: monospace;
+    font-style: normal;
+    left: 0px;
+    margin-right: 14px;
+}
+
+h3 {
+    color: black;
+    font-size: 30px;
+    font-family: monospace;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Outfit", sans-serif;
+}
+
+h6 {
+    color: var(--spaceblue);
+    display: flex;
+    justify-content: center;
+    font-family: "Outfit", sans-serif;
+    font-size: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+a {
+    color: var(--flamered);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--flamered);
+}
+
+p {
+    line-height: 40px;
+}
+
+div.tiles {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+a.tile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46%;
+    min-height: 180px;
+    height: auto;
+    margin: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    text-shadow: 0px 0px 8px black, -2px -2px 8px black, -2px 2px 8px black, 2px -2px 8px black, 2px 2px 8px black;
+    transition: 0.4s;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+}
+
+a.tile:hover {
+    transition: 0.4s;
+    filter: brightness(1.5);
+}
+
+div.menu {
+    position: sticky;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    font-size: 24px;
+}
+
+div.menu a {
+    margin: 8px 20px;
+    padding: 8px;
+    border: 2px solid var(--babyblue);
+    border-radius: 18px;
+    text-decoration: none;
+    transition: 0.4s;
+    background-color: var(--babyblue);
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-weight: 200;
+}
+
+div.menu a:hover {
+    border: 2px solid var(--babyblue);
+    background-color: white;
+    color: var(--babyblue);
+    transition: 0.4s;
+}
+
+a.tile {
+    background-color: white;
+}
+
+h6.footer {
+    background-color: white;
+}
+
+pre {
+    border-radius: 12px;
+}
+
+img {
+    border-radius: 12px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+}
