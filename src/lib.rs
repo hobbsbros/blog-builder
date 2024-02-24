@@ -81,29 +81,42 @@ pub fn compile(metadata: &Metadata) {
             let (_dist, changelist) = diff(
                 &String::from_utf8(f).unwrap(),
                 &String::from_utf8(emitted.clone()).unwrap(),
-                "\n"
+                "\n",
             );
 
             // Changes that *do not apply* to updated date
             let mut changes = 0;
 
-            for change in changelist {
+            let mut is_new_date = false;
+
+            // Update in the following conditions:
+            // - Last Updated date added
+            // - Last Updated date removed
+            // - Something other than Last Updated date is new
+            for change in &changelist {
                 if let Difference::Same (_) = change {
                     // do nothing
                 } else if let Difference::Add (a) = change {
                     if !a.contains("last-updated-date") {
                         changes += 1;
+                    } else {
+                        is_new_date = !is_new_date;
                     }
                 } else if let Difference::Rem (r) = change {
                     if !r.contains("last-updated-date") {
                         changes += 1;
+                    } else {
+                        is_new_date = !is_new_date;
                     }
                 }
             }
 
-            changes != 0
+            changes > 0 || is_new_date
         },
-        Err (_) => false,
+
+        // If you can't find the original file, you do need
+        // to "update" (by creating a new file)
+        Err (_) => true,
     };
 
     if updated {
