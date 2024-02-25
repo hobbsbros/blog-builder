@@ -87,7 +87,7 @@ div.menu a {
     padding: 0px 40px 0px 40px;
 }
 
-a.tile {
+div.tile {
     background-color: white;
     display: inline-flex;
     align-items: center;
@@ -99,7 +99,7 @@ a.tile {
     transition: 0.4s;
 }
 
-a.tile:hover {
+div.tile:hover {
     transition: 0.4s;
     text-shadow: 0px 0px 10px #893838;
 }

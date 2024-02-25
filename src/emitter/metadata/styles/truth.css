@@ -113,7 +113,7 @@
         transition: 0.4s;
     }
     
-    a.tile {
+    div.tile {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -130,7 +130,7 @@
         margin: 10px;
     }
     
-    a.tile:hover {
+    div.tile:hover {
         min-height: 240px;
         width: 45%;
         background-color: #404040;
@@ -240,7 +240,7 @@
         display: none;
     }
     
-    a.tile {
+    div.tile {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -256,7 +256,7 @@
         margin: 10px;
     }
     
-    a.tile:hover {
+    div.tile:hover {
         min-height: 240px;
         width: 45%;
         background-color: #404040;
@@ -378,7 +378,7 @@
         font-size: 48px;
     }
     
-    a.tile {
+    div.tile {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -394,7 +394,7 @@
         margin: 10px;
     }
     
-    a.tile:hover {
+    div.tile:hover {
         min-height: 240px;
         width: 45%;
         background-color: #404040;

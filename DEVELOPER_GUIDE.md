@@ -29,7 +29,7 @@ div.tiles => \tiles
 
 div.menu => \menu
 
-a.tile => \tile
+div.tile => \tile
 
 h6.footer => \footer
 ```

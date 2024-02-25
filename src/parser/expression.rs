@@ -42,6 +42,12 @@ pub enum Expression {
         img: String,
         href: String,
     },
+    TileDesc {
+        name: Vec<Expression>,
+        desc: Vec<Expression>,
+        img: String,
+        href: String,
+    },
     Image {
         img: String,
         alt: String,
@@ -211,7 +217,7 @@ impl Display for Expression {
                 href: h,
             } => {
                 let mut inside = format!(
-                    " <a class=\"tile\" href=\"{}\" style=\"background-image: url('{}'); background-position: center;\">",
+                    " <div class=\"tile\" onclick=\"window.location=\'{}\';\" style=\"background-image: url('{}'); cursor: pointer; background-position: center;\"><div>",
                     &h,
                     &i,
                 );
@@ -219,7 +225,30 @@ impl Display for Expression {
                     let string = format!("{}", expr);
                     inside.push_str(&string);
                 }
-                inside.push_str("</a> ");
+                inside.push_str("</div></div> ");
+                inside
+            },
+            TileDesc {
+                name: n,
+                desc: d,
+                img: i,
+                href: h,
+            } => {
+                let mut inside = format!(
+                    " <div class=\"tile\" onclick=\"window.location=\'{}\';\" style=\"background-image: url('{}'); cursor: pointer; background-position: center;\"><div>",
+                    &h,
+                    &i,
+                );
+                for expr in n {
+                    let string = format!("{}", expr);
+                    inside.push_str(&string);
+                }
+                inside.push_str("</div><br><div class=\"desc\">");
+                for expr in d {
+                    let string = format!("{}", expr);
+                    inside.push_str(&string);
+                }
+                inside.push_str("</div></div> ");
                 inside
             },
             Image {

@@ -65,6 +65,30 @@ impl PrefixParselet for ControlParselet {
                     href,
                 }
             },
+            "tiledesc" => {
+                tokenizer.discard(TokenClass::OpenCurly);
+                let name = parser.parse_tokens(tokenizer, TokenClass::OpenCurly.get_precedence());
+                tokenizer.discard(TokenClass::CloseCurly);
+
+                tokenizer.discard(TokenClass::OpenCurly);
+                let desc = parser.parse_tokens(tokenizer, TokenClass::OpenCurly.get_precedence());
+                tokenizer.discard(TokenClass::CloseCurly);
+
+                tokenizer.discard(TokenClass::OpenCurly);
+                let img = tokenizer.discard(TokenClass::Alphanumeric);
+                tokenizer.discard(TokenClass::CloseCurly);
+
+                tokenizer.discard(TokenClass::OpenCurly);
+                let href = tokenizer.discard(TokenClass::Alphanumeric);
+                tokenizer.discard(TokenClass::CloseCurly);
+
+                Expression::TileDesc {
+                    name,
+                    desc,
+                    img,
+                    href,
+                }
+            },
             "img" => {
                 tokenizer.discard(TokenClass::OpenCurly);
                 let src = tokenizer.discard(TokenClass::Alphanumeric);
