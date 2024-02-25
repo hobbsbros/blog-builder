@@ -45,6 +45,11 @@ pub enum Expression {
     Image {
         img: String,
         alt: String,
+        scale: String,
+    },
+    FloatingImage {
+        img: String,
+        alt: String,
     },
     Header (Vec<Expression>),
     Footer (Vec<Expression>),
@@ -220,8 +225,18 @@ impl Display for Expression {
             Image {
                 img: i,
                 alt: a,
+                scale: s,
             } => format!(
-                " <img src=\"{}\" alt=\"{}\"> ",
+                " <img src=\"{}\" style=\"height: {}px;\" alt=\"{}\"> ",
+                i,
+                s,
+                a,
+            ),
+            FloatingImage {
+                img: i,
+                alt: a,
+            } => format!(
+                " <img src=\"{}\" class=\"floating\" alt=\"{}\"> ",
                 i,
                 a,
             ),

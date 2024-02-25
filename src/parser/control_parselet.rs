@@ -74,7 +74,26 @@ impl PrefixParselet for ControlParselet {
                 let alt = tokenizer.discard(TokenClass::Alphanumeric);
                 tokenizer.discard(TokenClass::CloseCurly);
 
+                tokenizer.discard(TokenClass::OpenCurly);
+                let scale = tokenizer.discard(TokenClass::Alphanumeric);
+                tokenizer.discard(TokenClass::CloseCurly);
+
                 Expression::Image {
+                    img: src,
+                    alt,
+                    scale,
+                }
+            },
+            "floating" => {
+                tokenizer.discard(TokenClass::OpenCurly);
+                let src = tokenizer.discard(TokenClass::Alphanumeric);
+                tokenizer.discard(TokenClass::CloseCurly);
+
+                tokenizer.discard(TokenClass::OpenCurly);
+                let alt = tokenizer.discard(TokenClass::Alphanumeric);
+                tokenizer.discard(TokenClass::CloseCurly);
+
+                Expression::FloatingImage {
                     img: src,
                     alt,
                 }

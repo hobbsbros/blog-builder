@@ -97,16 +97,16 @@ pub fn compile(metadata: &Metadata) {
                 if let Difference::Same (_) = change {
                     // do nothing
                 } else if let Difference::Add (a) = change {
-                    if !a.contains("last-updated-date") {
-                        changes += 1;
-                    } else {
+                    if a.contains("last-updated-date") && !a.contains("\n\n") {
                         is_new_date = !is_new_date;
+                    } else {
+                        changes += 1;
                     }
                 } else if let Difference::Rem (r) = change {
-                    if !r.contains("last-updated-date") {
-                        changes += 1;
-                    } else {
+                    if r.contains("last-updated-date") && !r.contains("\n\n"){
                         is_new_date = !is_new_date;
+                    } else {
+                        changes += 1;
                     }
                 }
             }
