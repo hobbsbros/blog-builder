@@ -10,7 +10,7 @@ name = "utils"
 path = "src/lib.rs"
 
 [[bin]]
-name = "weblog"
+name = "blog"
 path = "src/main.rs"
 
 [dependencies]

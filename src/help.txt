@@ -1,0 +1,53 @@
+USAGE
+    blog [flag1] [argument1] [flag2] [argument2] ... 
+
+FLAGS
+    --style     Set the stylesheet
+    --sitename  Set the website name
+    --menu      Include an HTML file as the menu
+    --icon      Include an icon
+    --analytics Include an HTML file with analytics links
+
+STYLESHEET (--style)
+    Include a stylesheet.
+
+    Available stylesheets are:
+        citizen
+        modern
+        tech
+        truth
+
+    Example usage:
+        blog --style citizen
+
+SITENAME (--sitename)
+    Set the website's global name, to be included in each
+    page's name.
+
+    Example usage:
+        blog --sitename "My Website"
+
+    This may produce the following pagenames:
+        Home | My Website
+        New Page | My Website
+        Contact | My Website
+
+MENU (--menu)
+    Set the website's menu.  This flag will replace all instances of \menu with the HTML provided.
+
+    Example usage:
+        blog --menu menu.html
+
+WEBSITE ICON (--icon)
+    Set the website's icon.  The icon *must* be named "\favicon.ico".
+
+    Example usage:
+        blog --icon
+
+VISITOR ANALYTICS (--analytics)
+    Include an analytics HTML block.  This can be used
+    to connect the website to Google Analytics or other
+    web analytics services.
+
+    Example usage:
+        blog --analytics analytics.html

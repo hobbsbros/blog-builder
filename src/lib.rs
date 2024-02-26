@@ -31,7 +31,11 @@ pub use emitter::{
     CommandOption,
 };
 
+/// Version number.
 const VERSION: &str = "0.1.0";
+
+/// Help menu.
+const HELP: &str = include_str!("help.txt");
 
 /// Compiles a file, given its filename.
 pub fn compile(metadata: &Metadata) {
@@ -157,7 +161,8 @@ pub fn build(metadata: &Metadata) {
 pub fn help() {
     println!("Blog Builder");
     println!("Version {}", VERSION);
-    println!("Help menu coming soon!");
+    println!();
+    println!("{}", HELP);
 
     process::exit(0);
 }
