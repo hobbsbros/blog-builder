@@ -194,7 +194,7 @@
     body {
         background-color: white;
         margin: 0% 5%;
-        font-size: 24px;
+        font-size: 54px;
         font-family: "EB Garamond", serif;
         padding-bottom: 80px;
     }
@@ -225,7 +225,7 @@
 
     h2::before {
         content: "\2794";
-        font-size: 48px;
+        font-size: 64px;
         font-family: monospace;
         font-style: normal;
         left: 0px;
@@ -245,7 +245,7 @@
         color: var(--spaceblue);
         display: flex;
         justify-content: center;
-        font-family: "Outfit", sans-serif;
+        font-family: "Outfit", sa36ns-serif;
         font-weight: 300;
         font-size: 36px;
         margin-top: 40px;
@@ -264,7 +264,7 @@
     }
 
     p {
-        line-height: 80px;
+        line-height: 96px;
         margin-bottom: 42px;
     }
 
@@ -282,7 +282,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 92%;
+        width: 100%;
         min-height: 180px;
         height: auto;
         margin: 10px;
@@ -303,7 +303,7 @@
 
     .desc {
         font-family: "EB Garamond", serif;
-        font-size: 36px;
+        font-size: 48px;
     }
 
     div.menu {
