@@ -315,7 +315,7 @@
         text-align: center;
         flex-flow: row;
         flex-wrap: wrap;
-        font-size: 42px;
+        font-size: 56px;
     }
 
     div.menu a {
@@ -373,6 +373,7 @@
         border-radius: 12px;
         margin-top: 16px;
         margin-bottom: 16px;
+        max-width: 50%;
         max-height: 40%;
         width: auto;
         float: left;
