@@ -94,7 +94,7 @@
     
     .menu {
         width: 100%;
-        display: none;
+        display: flex;
         margin: auto;
         align-items: center;
         justify-content: center;
