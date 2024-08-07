@@ -7,6 +7,7 @@ use super::{
     Tokenizer,
 };
 
+/// Prefix parselet abstraction.
 pub trait PrefixParselet {
     fn parse(&self, parser: &Parser, tokenizer: &mut Tokenizer, token: &Token) -> Expression;
 }

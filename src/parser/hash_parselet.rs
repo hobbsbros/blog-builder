@@ -10,6 +10,7 @@ use super::{
     Tokenizer,
 };
 
+/// Parselet for hash-prefixed expressions.
 pub struct HashParselet;
 
 impl PrefixParselet for HashParselet {

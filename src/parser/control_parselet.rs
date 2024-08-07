@@ -11,6 +11,7 @@ use super::{
     Tokenizer,
 };
 
+/// Parselet for control sequences.
 pub struct ControlParselet;
 
 impl PrefixParselet for ControlParselet {

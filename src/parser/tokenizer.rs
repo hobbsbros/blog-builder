@@ -8,13 +8,14 @@ use std::fmt::{
     Result,
 };
 
+/// A character stream.
 pub struct Charstream {
     stream: Vec<char>,
     index: usize,
 }
 
 impl Charstream {
-    /// Constructs a new character stream.
+    /// Construct a new character stream.
     pub fn new(input: String) -> Self {
         let stream = input.as_str()
             .chars()
@@ -26,14 +27,14 @@ impl Charstream {
         }
     }
 
-    /// Gets the next character from this character stream.
+    /// Get the next character from this character stream.
     pub fn next(&mut self) -> Option<char> {
         let peek = self.peek();
         self.index += 1;
         peek
     }
 
-    /// Peeks at the next character from this character stream.
+    /// Peek at the next character from this character stream.
     pub fn peek(&self) -> Option<char> {
         if self.index < self.stream.len() {
             Some (self.stream[self.index])
@@ -44,12 +45,14 @@ impl Charstream {
 }
 
 #[derive(Clone, Debug)]
+/// A token produced by the tokenizer.
 pub struct Token {
     class: TokenClass,
     value: String,
 }
 
 impl Token {
+    /// Construct a new token.
     pub fn new(class: TokenClass, value: &str) -> Self {
         Self {
             class,
@@ -57,27 +60,44 @@ impl Token {
         }
     }
 
+    /// Get the class of the token.
     pub fn get_class(&self) -> TokenClass {
         self.class
     }
 
+    /// Get the value of the token.
     pub fn get_value(&self) -> String {
         self.value.to_owned()
     }
 
+    /// Get the precedence of the token.
     pub fn get_precedence(&self) -> usize {
         self.class.get_precedence()
     }
 }
 
 #[derive(Clone, Copy, PartialEq, Eq, Debug, Hash)]
+/// Classes of tokens available.
 pub enum TokenClass {
+    /// Alphanumeric token.
     Alphanumeric,
+
+    /// Begin paragraph marker.
     BeginParagraph,
+
+    /// Control sequence beginning with `'\'`.
     Control,
+
+    /// Open curly brace.
     OpenCurly,
+
+    /// Close curly brace.
     CloseCurly,
+
+    /// Hash `'#'`.
     Hash,
+
+    /// Newline character.
     Newline,
 }
 

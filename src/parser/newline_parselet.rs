@@ -9,6 +9,7 @@ use super::{
     Tokenizer,
 };
 
+/// Parselet for newline characters.
 pub struct NewlineParselet;
 
 impl PrefixParselet for NewlineParselet {

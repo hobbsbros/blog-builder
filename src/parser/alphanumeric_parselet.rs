@@ -8,6 +8,7 @@ use super::{
     Tokenizer,
 };
 
+/// Parselet for alphanumeric expressions.
 pub struct AlphanumericParselet;
 
 impl PrefixParselet for AlphanumericParselet {

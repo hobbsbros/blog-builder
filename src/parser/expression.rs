@@ -1,4 +1,4 @@
-//! Enumerates the types of expressions available in the Blog Builder editor.
+//! Enumerates the types of expressions available in the Blog Builder.
 
 use std::{
     fmt::{
@@ -14,57 +14,138 @@ use chrono::prelude::*;
 use crate::Error;
 
 #[derive(PartialEq, Clone, Debug)]
+/// Types of expressions available to the Blog Builder.
 pub enum Expression {
+    /// Webpage title equivalent to HTML `h2`.
     Title (Vec<Expression>),
+
+    /// Webpage heading equivalent to HTML `h3`.
     Heading (Vec<Expression>),
+
+    /// Webpage subheading equivalent to HTML `h4`.
     Subheading (Vec<Expression>),
+
+    /// Webpage subtitle equivalent to HTML `h5`.
     Subtitle (Vec<Expression>),
+
+    /// Webpage subsubtitle equivalent to HTML `h6`.
     Subsubtitle (Vec<Expression>),
+
+    /// Webpage paragraph equivalent to HTML `p`.
     Paragraph (Vec<Expression>),
+
+    /// Alphanumeric string.
     Alphanumeric (String),
+    
+    /// Newline character equivalent to HTML `<br>`.
     Newline,
+
+    /// Bold text.
     Bold (Vec<Expression>),
+
+    /// Italic text.
     Italic (Vec<Expression>),
+
+    /// Block quote.
     BlockQuote {
+        /// Quote content.
         quote: Vec<Expression>,
+
+        /// Quote citation.
         citation: Vec<Expression>,
     },
+
+    /// Hyperlink to another URL.
     Hyperlink {
+        /// Text displayed.
         name: Vec<Expression>,
+        
+        /// Reference or URL.
         href: String,
     },
+
+    /// Software source code.
     Code {
+        /// Language of the source code.
         language: String,
+
+        /// Source code.
         code: String,
     },
+
+    /// Tile with image and hyperlink to another page.
     Tile {
+        /// Name displayed on the tile.
         name: Vec<Expression>,
+        
+        /// URL to the image of the tile.
         img: String,
+
+        /// Hyperlink followed after clicking on the tile.
         href: String,
     },
+
+    /// Tile with description, image, and hyperlink to another page.
     TileDesc {
+        /// Name displayed on the tile.
         name: Vec<Expression>,
+
+        /// Description displayed on the tile.
         desc: Vec<Expression>,
+
+        /// URL to the image of the tile.
         img: String,
+
+        /// Hyperlink followed after clicking on the tile.
         href: String,
     },
+
+    /// Image.
     Image {
+        /// URL to the image source.
         img: String,
+
+        /// Alternate text.
         alt: String,
+
+        /// Scale of the image.
         scale: String,
     },
+
+    /// Floating image within a block of text.
     FloatingImage {
+        /// URL to the source image.
         img: String,
+
+        /// Alternate text.
         alt: String,
     },
+
+    /// Header equivalent to HTML `h1`.
     Header (Vec<Expression>),
+
+    /// Footer equivalent to HTML `h6` with class `footer`.
     Footer (Vec<Expression>),
+
+    /// Footnote.
     Footnote (Vec<Expression>),
+
+    /// Collection of footnotes.
     Footnotes,
+
+    /// Block at the top of a webpage.
     Topblock (Vec<Expression>),
+
+    /// Web menu.
     Menu,
+
+    /// "Last Updated" date.
     Date,
+
+    /// Collection of tiles.
     Tiles (Vec<Expression>),
+
+    /// Webpage name.
     Pagename (String),
 }
 
