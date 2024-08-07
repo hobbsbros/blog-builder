@@ -8,6 +8,7 @@ use super::{
     Tokenizer,
 };
 
+/// Parselet for HTML paragraphs.
 pub struct ParagraphParselet;
 
 impl PrefixParselet for ParagraphParselet {
