@@ -39,7 +39,7 @@ MENU (--menu)
         blog --menu menu.html
 
 WEBSITE ICON (--icon)
-    Set the website's icon.  The icon *must* be named "\favicon.ico".
+    Set the website's icon.  The icon *must* be named "/favicon.ico".
 
     Example usage:
         blog --icon
